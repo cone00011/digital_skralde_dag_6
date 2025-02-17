@@ -1,0 +1,63 @@
+---
+import { useState } from 'react';
+
+let formData = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  dataDeleted: 0,
+  termsAccepted: false,
+  newsletter: false
+};
+
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log('Form submitted:', formData);
+}
+---
+<form onSubmit={handleSubmit} class="bg-white p-8 rounded-none shadow-md max-w-md mx-auto border border-gray-300">
+  <h2 class="text-blue-700 text-[14px] md:text-[36px] font-bold text-center mb-4">
+    REGISTRER DIT BIDRAG
+  </h2>
+  <p class="text-gray-600 text-center mb-6 text-sm md:text-lg">
+    VENLIGST UDFYLD OPLYSNINGERNE NEDENFOR.
+  </p>
+
+  <input type="text" placeholder="FORNAVN" bind:value={formData.firstName} required 
+    class="w-full p-4 mb-4 border rounded-none focus:ring focus:ring-blue-300" />
+
+  <input type="text" placeholder="EFTERNAVN" bind:value={formData.lastName} required 
+    class="w-full p-4 mb-4 border rounded-none focus:ring focus:ring-blue-300" />
+
+  <input type="email" placeholder="EMAIL" bind:value={formData.email} required 
+    class="w-full p-4 mb-4 border rounded-none focus:ring focus:ring-blue-300" />
+
+  <div class="mb-6">
+    <div class="relative">
+      <input type="number" min="0" bind:value={formData.dataDeleted} 
+        class="w-full p-4 pr-12 border rounded-none focus:ring focus:ring-blue-300 placeholder:text-blue-700" placeholder="MÆNGDE DATA SLETTET" />
+      <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-blue-700">GB</span>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <label class="flex items-center space-x-2">
+      <input type="checkbox" bind:checked={formData.termsAccepted} required 
+        class="w-5 h-5 text-blue-700 border-gray-300 rounded-none focus:ring focus:ring-blue-300 appearance-none border-2 checked:bg-blue-700 checked:border-transparent relative" />
+      <span>Jeg accepterer betingelserne.</span>
+    </label>
+    <label class="flex items-center space-x-2 mt-4">
+      <input type="checkbox" bind:checked={formData.newsletter} 
+        class="w-5 h-5 text-blue-700 border-gray-300 rounded-none focus:ring focus:ring-blue-300 appearance-none border-2 checked:bg-blue-700 checked:border-transparent relative" />
+      <span>Jeg vil gerne tilmelde mig nyhedsbrevet.</span>
+    </label>
+  </div>
+
+  <button type="submit" 
+    class="w-full bg-white text-blue-700 p-4 rounded-none border border-blue-700 transition 
+           hover:bg-blue-700 hover:text-white active:scale-95 shadow-md 
+           hover:shadow-lg active:shadow-sm">
+    REGISTRER
+  </button>
+</form>
+
