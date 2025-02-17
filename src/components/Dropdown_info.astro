@@ -1,46 +1,89 @@
-<section>
-    <h2 class="text-4xl font-mono pb-20 pl-30 ">Bogens kapitler</h2>
-    <div class="grid md:grid-cols-2 gap-6 p-6 font-mono text-lg pl-50">
-        <div x-data="{ open: null }">
-            <ul class="list-none space-y-4">
-                <li>
-                    <button @click="open === 1 ? open = null : open = 1" class="font-bold text-rose-950 w-full text-left hover:bg-rose-500 p-2 transition-all">Kapitel 1 - Intro til street foto</button>
-                    <p x-show="open === 1" x-transition class="mt-2 p-2 bg-gray-100 text-black">Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry)...</p>
-                </li>
-                <li>
-                    <button @click="open === 2 ? open = null : open = 2" class="font-bold text-rose-950 w-full text-left hover:bg-rose-500 p-2 transition-all">Kapitel 2 - Om at skyde street</button>
-                    <p x-show="open === 2" x-transition class="mt-2 p-2 bg-gray-100 text-black">Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det!...</p>
-                </li>
-                <li>
-                    <button @click="open === 3 ? open = null : open = 3" class="font-bold text-rose-950 w-full text-left hover:bg-rose-500 p-2 transition-all">Kapitel 3 - Om at finde det rette motiv</button>
-                    <p x-show="open === 3" x-transition class="mt-2 p-2 bg-gray-100 text-black">Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver...</p>
-                </li>
-                <li>
-                    <button @click="open === 4 ? open = null : open = 4" class="font-bold text-rose-950 w-full text-left hover:bg-rose-500 p-2 transition-all">Kapitel 4 - Digital street foto</button>
-                    <p x-show="open === 4" x-transition class="mt-2 p-2 bg-gray-100 text-black">De fleste af os skyder oftest digitalt fordi det er billigere og nemmere...</p>
-                </li>
-            </ul>
-        </div>
-
-        <div x-data="{ open: null }">
-            <ul class="list-none space-y-4">
-                <li>
-                    <button @click="open === 5 ? open = null : open = 5" class="font-bold text-rose-950 w-full text-left hover:bg-rose-500 p-2 transition-all">Kapitel 5 - Analog street foto</button>
-                    <p x-show="open === 5" x-transition class="mt-2 p-2 bg-gray-100 text-black">Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital...</p>
-                </li>
-                <li>
-                    <button @click="open === 6 ? open = null : open = 6" class="font-bold text-rose-950 w-full text-left hover:bg-rose-500 p-2 transition-all">Kapitel 6 - Om at skyde sort/hvid</button>
-                    <p x-show="open === 6" x-transition class="mt-2 p-2 bg-gray-100 text-black">Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor?...</p>
-                </li>
-                <li>
-                    <button @click="open === 7 ? open = null : open = 7" class="font-bold text-rose-950 w-full text-left hover:bg-rose-500 p-2 transition-all">Kapitel 7 - Kreative teknikker</button>
-                    <p x-show="open === 7" x-transition class="mt-2 p-2 bg-gray-100 text-black">Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver...</p>
-                </li>
-                <li>
-                    <button @click="open === 8 ? open = null : open = 8" class="font-bold text-rose-950 w-full text-left hover:bg-rose-500 p-2 transition-all">Kapitel 8 - Kom helt tæt på!</button>
-                    <p x-show="open === 8" x-transition class="mt-2 p-2 bg-gray-100 text-black">Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på?...</p>
-                </li>
-            </ul>
-        </div>
+<section class="p-0">
+    <div x-data="{ open: null }">
+        <ul class="list-none border border-black w-screen max-w-none">
+            <li class="border-b border-black">
+                <button @click="open === 1 ? open = null : open = 1"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:hover:bg-[#1100FF] md:hover:text-white text-[20px] md:text-[60px] md:pl-[100px] md:pr-[100px]">
+                    HVORFOR RYDDE OP DIGITALT?
+                    <span @click.stop="open === 1 ? open = null : open = 1"
+                        class="border border-[#1100FF] text-[#1100FF] md:hidden p-1 cursor-pointer w-8 h-8 flex items-center justify-center">
+                        <svg x-show="open !== 1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        <svg x-show="open === 1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+                    </span>
+                </button>
+                <div x-show="open === 1" x-transition class="p-4 text-black md:pl-[80px] md:text-[30px] md:pr-[80px]">
+                    <div class="flex justify-start items-center border-b border-black pb-4 mb-4">
+                        <span class="text-[#1100FF] text-[30px] md:text-[55px] mr-4">1</span>
+                        <p class="text-left">Hjælper med at reducere CO₂ aftrykket.</p>
+                    </div>
+                    <div class="flex justify-start items-center border-b border-black pb-4 mb-4">
+                        <span class="text-[#1100FF] text-[30px] md:text-[55px] mr-4">2</span>
+                        <p class="text-left">Forlænger dine enheders levetid.</p>
+                    </div>
+                    <div class="flex justify-start items-center border-b border-black pb-4 mb-4">
+                        <span class="text-[#1100FF] text-[30px] md:text-[55px] mr-4">3</span>
+                        <p class="text-left">Fremskynder og forenkler informationsdeling og resulatater. </p>
+                    </div>
+                    <div class="flex justify-start items-center border-b border-black pb-4 mb-4">
+                        <span class="text-[#1100FF] text-[30px] md:text-[55px] mr-4">4</span>
+                        <p class="text-left">Reducerer datalagringens sikkerhedsrisici.</p>
+                    </div>
+                    <div class="flex justify-start items-center pb-4 mb-4">
+                        <span class="text-[#1100FF] text-[30px] md:text-[55px] mr-4">5</span>
+                        <p class="text-left">Øger disk- og serverkapaciteten, hvilket hjælper med at reducere omkostninger.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="border-b border-black">
+                <button @click="open === 2 ? open = null : open = 2"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:hover:bg-[#1100FF] md:hover:text-white text-[20px] md:text-[60px] md:pl-[100px] md:pr-[100px]">
+                    FACTS OM DIGITALT SKRALD
+                    <span @click.stop="open === 2 ? open = null : open = 2"
+                        class="border border-[#1100FF] text-[#1100FF] md:hidden p-1 cursor-pointer w-8 h-8 flex items-center justify-center">
+                        <svg x-show="open !== 2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        <svg x-show="open === 2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+                    </span>
+                </button>
+                <div x-show="open === 2" x-transition class="p-4 text-black md:pl-[80px] md:text-[30px] md:pr-[80px]">
+                    <div class="flex justify-between items-center border-b border-black pb-4 mb-4">
+                        <p>1.184.747 DELTAGERE</p>
+                        <img class="w-20 md:w-28 pr-4" src="grafik/deltagere.svg" alt="deltagere">
+                    </div>
+                    <div class="flex justify-between items-center border-b border-black pb-4 mb-4">
+                        <p>14.5 M GB DATA SLETTET</p>
+                        <img class="w-20 md:w-28 pr-4" src="grafik/data_slettet.svg" alt="data_slettet">
+                    </div>
+                    <div class="flex justify-between items-center pb-4 mb-4">
+                        <p>3.625 TONS CO2-UDLEDNING FORHINDRET ÅRLIGT</p>
+                        <img class="w-20 md:w-28 pr-4" src="grafik/co2_udledning.svg" alt="co2_udledning">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button @click="open === 3 ? open = null : open = 3"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:hover:bg-[#1100FF] md:hover:text-white text-[20px] md:text-[60px] md:pl-[100px] md:pr-[100px]">
+                    DIGITAL OPRYDNING I TAL
+                    <span @click.stop="open === 3 ? open = null : open = 3"
+                        class="border border-[#1100FF] text-[#1100FF] md:hidden p-1 cursor-pointer w-8 h-8 flex items-center justify-center">
+                        <svg x-show="open !== 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        <svg x-show="open === 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+                    </span>
+                </button>
+                <div x-show="open === 3" x-transition class="p-4 text-black md:pl-[80px] md:text-[30px] md:pr-[80px]">
+                    <div class="flex justify-between items-center border-b border-black pb-4 mb-4">
+                        <p>1.184.747 DELTAGERE</p>
+                        <img class="w-20 md:w-28 pr-4" src="grafik/deltagere.svg" alt="deltagere">
+                    </div>
+                    <div class="flex justify-between items-center border-b border-black pb-4 mb-4">
+                        <p>14.5 M GB DATA SLETTET</p>
+                        <img class="w-20 md:w-28 pr-4" src="grafik/data_slettet.svg" alt="data_slettet">
+                    </div>
+                    <div class="flex justify-between items-center pb-4 mb-4">
+                        <p>3.625 TONS CO2-UDLEDNING FORHINDRET ÅRLIGT</p>
+                        <img class="w-20 md:w-28 pr-4" src="grafik/co2_udledning.svg" alt="co2_udledning">
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </section>
