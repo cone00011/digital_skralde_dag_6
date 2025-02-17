@@ -1,8 +1,32 @@
 ---
+
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full">
+  <header id="navbar" class="flex flex-row justify-between">
+    <div id="logo">
+      <a href="">
+        <img class="w-5" src="/public/grafik/skraldespand_footer.svg" alt="Skraldespand Logo" />
+      </a>
+    </div>
+    <nav id="desktopmenu" class="hidden lg:block">
+      <ul class="flex flex-row gap-4 font-bold">
+        <li><a href="index.html">RESSOURCER</a></li>
+        <li><a href="https://worldcleanupday.dk/">WORLD CLEAN UP DAG</a></li>
+        <li><a href="index.html">HVORDAN DELTAGER DU?</a></li>
+      </ul>
+    </nav>
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu" aria-expanded="showmenu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+  </header>
+  <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click.outside="showmenu = false">
+    <ul>
+      <li><a href="index.html">RESSOURCER</a></li>
+      <li><a href="https://worldcleanupday.dk/">WORLD CLEAN UP DAG</a></li>
+      <li><a href="index.html">HVORDAN DELTAGER DU?</a></li>
+    </ul>
+  </nav>
 </div>
-
-
-
