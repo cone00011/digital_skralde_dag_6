@@ -1,5 +1,6 @@
 ---
+const { label = "REGISTRER BIDRAG" } = Astro.props;
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+<button class="sticky top-0 rotate-[-90deg] uppercase font-bold border border-blue-500 text-blue-500 px-4 py-2 hover:bg-blue-500 hover:text-white transition">
+  {label}
+</button>
