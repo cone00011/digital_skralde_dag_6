@@ -3,17 +3,17 @@
 ---
 
 <div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-white">
-  <header id="navbar" class="flex flex-row justify-between">
+  <header id="navbar" class="flex flex-row justify-between items-center">
     <div id="logo">
       <a href="index.html">
-        <img class="w-5" src="/public/grafik/skraldespand_footer.svg" alt="Skraldespand Logo" />
+        <img class="w-7 lg:w-10" src="/public/grafik/skraldespand_footer.svg" alt="Skraldespand Logo" />
       </a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-4 font-bold">
-        <li><a href="index.html">RESSOURCER</a></li>
-        <li><a href="https://worldcleanupday.dk/">WORLD CLEAN UP DAG</a></li>
-        <li><a href="/stepbystep">HVORDAN DELTAGER DU?</a></li>
+      <ul class="flex flex-row gap-6 font-bold text-lg lg:text-xl">
+        <li><a href="index.html" class="hover:text-[#1100FF] transition">RESSOURCER</a></li>
+        <li><a href="https://worldcleanupday.dk/" class="hover:text-[#1100FF] transition">WORLD CLEAN UP DAG</a></li>
+        <li><a href="/stepbystep" class="hover:text-[#1100FF] transition">HVORDAN DELTAGER DU?</a></li>
       </ul>
     </nav>
     <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu" aria-expanded="showmenu">
@@ -24,10 +24,12 @@
   </header>
   <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click.outside="showmenu = false">
     <ul class="text-center font-bold bg-white">
-      <li><a href="index.html">RESSOURCER</a></li>
-      <li><a href="https://worldcleanupday.dk/">WORLD CLEAN UP DAG</a></li>
-      <li><a href="/stepbystep">HVORDAN DELTAGER DU?</a></li>
+      <li><a href="index.html" class="hover:text-[#1100FF] transition">RESSOURCER</a></li>
+      <li><a href="https://worldcleanupday.dk/" class="hover:text-[#1100FF] transition">WORLD CLEAN UP DAG</a></li>
+      <li><a href="/stepbystep" class="hover:text-[#1100FF] transition">HVORDAN DELTAGER DU?</a></li>
     </ul>
   </nav>
 </div>
+
+
 

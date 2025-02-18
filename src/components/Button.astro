@@ -1,6 +1,7 @@
 ---
 const { label = "REGISTRER BIDRAG" } = Astro.props;
 ---
-<button class="fixed right-0 top-1/2 -translate-y-1/2 rotate-[-90deg] uppercase font-light border border-[#1100FF] text-[#1100FF] px-4 py-2 hover:bg-[#1100FF] hover:text-white transition mr-[-1px]" style="font-family: Helvetica, Arial, sans-serif;">
+<button onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' })" class="hidden md:block fixed right-[-70px] top-1/2 -translate-y-1/2 rotate-[-90deg] uppercase font-light border border-[#1100FF] text-[#1100FF] px-4 py-2 hover:bg-[#1100FF] hover:text-white transition" style="font-family: Helvetica, Arial, sans-serif;">
   {label}
 </button>
+
