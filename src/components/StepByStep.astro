@@ -1,0 +1,52 @@
+<section class="text-center py-5">
+    <h1 class="font-helvetica text-[#1100FF] text-[45px] md:text-[80px] pt-15 pb-10 md:pb-15">STEP BY STEP</h1>
+    <h2 class="font-helvetica text-gray-800 text-base text-[20px] md:text-[30px] pb-10">DIN PERSONLIGE DIGITALE OPRYDNING</h2>
+</section>
+
+<section class="p-0">
+    <div x-data="{ open: null }">
+        <ul class="list-none border border-black w-full md:grid md:grid-cols-2 md:gap-0">
+            <!-- STEP 1 -->
+            <li class="border-b border-black md:border-none flex flex-col h-full">
+                <button @click="open === 1 ? open = null : open = 1"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:border md:border-black md:hover:border-none md:hover:bg-[#1100FF] md:hover:text-white text-[15px] md:text-[30px] md:pl-[100px] md:pr-[100px] flex-grow">
+                    STEP 1: <br> RYD OP PÅ DIN SMART PHONE
+                </button>
+                <div x-show="open === 1" x-transition class="p-4 text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
+                    <p>Her kan du rydde op på din smartphone ved at slette uønskede apps, billeder og gamle meddelelser. Det hjælper med at frigøre plads og optimere din enheds ydeevne.</p>
+                </div>
+            </li>
+            <!-- STEP 2 -->
+            <li class="border-b border-black md:border-none flex flex-col h-full">
+                <button @click="open === 2 ? open = null : open = 2"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:border md:border-black md:hover:border-none md:hover:bg-[#1100FF] md:hover:text-white text-[15px] md:text-[30px] md:pl-[100px] md:pr-[100px] flex-grow">
+                    STEP 2: <br> RYD DIN COMPUTER HARDDRIVE OP
+                </button>
+                <div x-show="open === 2" x-transition class="p-4 text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
+                    <p>For at optimere din computers harddisk, kan du slette unødvendige filer og programmer, rydde op i din download-mappe, og komprimere store filer for at få mere plads.</p>
+                </div>
+            </li>
+            <!-- STEP 3 -->
+            <li class="border-b border-black md:border-none flex flex-col h-full">
+                <button @click="open === 3 ? open = null : open = 3"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:border md:border-black md:hover:border-none md:hover:bg-[#1100FF] md:hover:text-white text-[15px] md:text-[30px] md:pl-[100px] md:pr-[100px] flex-grow">
+                    STEP 3: <br> RYD OP I DIN MAIL INDBAKKE
+                </button>
+                <div x-show="open === 3" x-transition class="p-4 text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
+                    <p>Ryd op i din mailindbakke ved at slette gamle emails, organisere dem i mapper, og fjerne spam og unødvendige nyhedsbreve for at holde din inbox ryddelig.</p>
+                </div>
+            </li>
+            <!-- STEP 4 -->
+            <li class="flex flex-col h-full">
+                <button @click="open === 4 ? open = null : open = 4"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:border md:border-black md:hover:border-none md:hover:bg-[#1100FF] md:hover:text-white text-[15px] md:text-[30px] md:pl-[100px] md:pr-[100px] flex-grow">
+                    STEP 4: <br> GØR NYE TILTAG
+                </button>
+                <div x-show="open === 4" x-transition class="p-4 text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
+                    <p>Overvej at implementere regelmæssige oprydningstiltag som cloud storage og automatiske slettefunktioner for at sikre, at din digitale plads forbliver organiseret.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
