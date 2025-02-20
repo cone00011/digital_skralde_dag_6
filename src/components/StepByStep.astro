@@ -1,102 +1,83 @@
 <section class="text-center py-5">
-    <h1 class="font-helvetica text-[#1100FF] text-[45px] md:text-[80px] pt-15 pb-10 md:pb-15">STEP BY STEP</h1>
-    <h2 class="font-helvetica text-gray-800 text-base text-[20px] md:text-[30px] pb-10">DIN PERSONLIGE DIGITALE OPRYDNING</h2>
+    <h1 class="font-helvetica text-[#1100FF] text-[32px] md:text-[64px] pt-15 pb-10 md:pb-15">STEP BY STEP</h1>
+    <h2 class="font-helvetica text-black text-base text-[15px] md:text-[32px] pb-10">DIN PERSONLIGE DIGITALE OPRYDNING</h2>
 </section>
 
-<section class="p-0 font-helvetica">
+<section class="p-0">
     <div x-data="{ open: null }">
-        <ul class="list-none border border-black w-full md:grid md:grid-cols-2 md:gap-0">
-            <!-- STEP 1 -->
-            <li class="border-b border-black md:border-none flex flex-col h-full">
-                <div class="flex justify-between items-center "> 
-                    <button @click="open === 1 ? open = null : open = 1"
-                        class="text-[#1100FF] w-full text-left p-4 flex-grow transition-all md:border md:border-black md:hover:border-none md:hover:bg-[#1100FF] md:hover:text-white text-[15px] md:text-[30px] md:pl-[100px] md:pr-[100px]">
-                        STEP 1: <br> RYD OP PÅ DIN SMART PHONE
-                    </button>
-                    <!-- Knappen med pil, der bliver til kryds i mobilversionen -->
+        <ul class="list-none border border-black w-screen max-w-none">
+            <li class="border-b border-black">
+                <button @click="open === 1 ? open = null : open = 1"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:hover:bg-[#1100FF] md:hover:text-white text-[20px] md:text-[32px] md:pl-[100px] md:pr-[100px]">
+                    STEP 1 - Ryd op på din smartphone
                     <span @click.stop="open === 1 ? open = null : open = 1"
                         class="border border-[#1100FF] text-[#1100FF] md:hidden p-1 cursor-pointer w-8 h-8 flex items-center justify-center">
-                        <svg x-show="open !== 1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
-                        <svg x-show="open === 1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2">
-                            <path d="M6 6l12 12M18 6l-12 12"/>
-                        </svg>
+                        <svg x-show="open !== 1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        <svg x-show="open === 1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
                     </span>
-                </div>
-                <div x-show="open === 1" x-transition class="p-4  text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
-                    <p>Her kan du rydde op på din smartphone ved at slette uønskede apps, billeder og gamle meddelelser. Det hjælper med at frigøre plads og optimere din enheds ydeevne.</p>
-                </div>
+                </button>
+                <div x-show="open === 1" x-transition class="p-4 text-black md:pl-[80px] md:text-[30px] md:pr-[80px]">
+                    <div class="flex justify-start items-center pb-4 mb-4">
+                
+                        <p class="text-left text-[12px] max-w-[400px] md:text-[20px] pl-[20px] md:pl-[30px] md:max-w-[1000px]">Her kan du rydde op på din smartphone ved at slette uønskede apps, billeder og gamle meddelelser. Det hjælper med at frigøre plads og optimere din enheds ydeevne.</p>
+                    </div>
+                
             </li>
-
-            <!-- STEP 2 -->
-            <li class="border-b border-black md:border-none flex flex-col h-full">
-                <div class="flex justify-between items-center"> 
-                    <button @click="open === 2 ? open = null : open = 2"
-                        class="text-[#1100FF] w-full text-left p-4 flex-grow transition-all md:border md:border-black md:hover:border-none md:hover:bg-[#1100FF] md:hover:text-white text-[15px] md:text-[30px] md:pl-[100px] md:pr-[100px]">
-                        STEP 2: <br> RYD DIN COMPUTER HARDDRIVE OP
-                    </button>
-                    <!-- Knappen med pil, der bliver til kryds i mobilversionen -->
+            <li class="border-b border-black">
+                <button @click="open === 2 ? open = null : open = 2"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:hover:bg-[#1100FF] md:hover:text-white text-[20px] md:text-[32px] md:pl-[100px] md:pr-[100px]">
+                    STEP 2 - Ryd din computer harddrive op
                     <span @click.stop="open === 2 ? open = null : open = 2"
                         class="border border-[#1100FF] text-[#1100FF] md:hidden p-1 cursor-pointer w-8 h-8 flex items-center justify-center">
-                        <svg x-show="open !== 2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
-                        <svg x-show="open === 2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2">
-                            <path d="M6 6l12 12M18 6l-12 12"/>
-                        </svg>
+                        <svg x-show="open !== 2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        <svg x-show="open === 2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
                     </span>
-                </div>
-                <div x-show="open === 2" x-transition class="p-4 text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
-                    <p>For at optimere din computers harddisk, kan du slette unødvendige filer og programmer, rydde op i din download-mappe, og komprimere store filer for at få mere plads.</p>
+                </button>
+                <div x-show="open === 2" x-transition class="p-4 text-[12px] text-black md:pl-[80px]  md:pr-[80px]">
+                    <div class="flex justify-between items-center  pb-4 mb-4 md:text-[20px]">
+                        <p class="pl-[20px] max-w-[400px] md:pl-[30px] md:max-w-[1000px]">For at optimere din computers harddisk, kan du slette unødvendige filer og programmer, rydde op i din download-mappe, og komprimere store filer for at få mere plads.</p>
+                    
+                    </div>
+                   
                 </div>
             </li>
-
-            <!-- STEP 3 -->
-            <li class="border-b border-black md:border-none flex flex-col h-full">
-                <div class="flex justify-between items-center"> 
-                    <button @click="open === 3 ? open = null : open = 3"
-                        class="text-[#1100FF] w-full text-left p-4 flex-grow transition-all md:border md:border-black md:hover:border-none md:hover:bg-[#1100FF] md:hover:text-white text-[15px] md:text-[30px] md:pl-[100px] md:pr-[100px]">
-                        STEP 3: <br> RYD OP I DIN MAIL INDBAKKE
-                    </button>
-                    <!-- Knappen med pil, der bliver til kryds i mobilversionen -->
+            <li class="border-b border-black">
+                <button @click="open === 3 ? open = null : open = 3"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:hover:bg-[#1100FF] md:hover:text-white text-[20px] md:text-[32px] md:pl-[100px] md:pr-[100px]">
+                    STEP 3 - Ryd op i din mailindbakke 
                     <span @click.stop="open === 3 ? open = null : open = 3"
                         class="border border-[#1100FF] text-[#1100FF] md:hidden p-1 cursor-pointer w-8 h-8 flex items-center justify-center">
-                        <svg x-show="open !== 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
-                        <svg x-show="open === 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2">
-                            <path d="M6 6l12 12M18 6l-12 12"/>
-                        </svg>
+                        <svg x-show="open !== 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        <svg x-show="open === 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
                     </span>
-                </div>
-                <div x-show="open === 3" x-transition class="p-4 text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
-                    <p>Ryd op i din mailindbakke ved at slette gamle emails, organisere dem i mapper, og fjerne spam og unødvendige nyhedsbreve for at holde din inbox ryddelig.</p>
+                </button>
+                <div x-show="open === 3" x-transition class="p-4 text-[12px] text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
+                    <div class="flex justify-between items-center  pb-4 mb-4">
+                        <p class=" pl-[20px] max-w-[400px] md:pl-[30px] md:max-w-[1000px]">Ryd op i din mailindbakke ved at slette gamle emails, organisere dem i mapper, og fjerne spam og unødvendige nyhedsbreve for at holde din inbox ryddelig.</p>
+                      
+                    </div>
+                    
                 </div>
             </li>
-
-            <!-- STEP 4 -->
-            <li class="flex flex-col h-full">
-                <div class="flex justify-between items-center "> 
-                    <button @click="open === 4 ? open = null : open = 4"
-                        class="text-[#1100FF] w-full text-left p-4 flex-grow transition-all md:border md:border-black md:hover:border-none md:hover:bg-[#1100FF] md:hover:text-white text-[15px] md:text-[30px] md:pl-[100px] md:pr-[100px]">
-                        STEP 4: <br> GØR NYE TILTAG
-                    </button>
-                    <!-- Knappen med pil, der bliver til kryds i mobilversionen -->
+            <li class="">
+                <button @click="open === 4 ? open = null : open = 4"
+                    class="text-[#1100FF] w-full text-left p-4 flex justify-between items-center transition-all md:hover:bg-[#1100FF] md:hover:text-white text-[20px] md:text-[32px] md:pl-[100px] md:pr-[100px]">
+                    STEP 4 - Gør nye tiltag
                     <span @click.stop="open === 4 ? open = null : open = 4"
                         class="border border-[#1100FF] text-[#1100FF] md:hidden p-1 cursor-pointer w-8 h-8 flex items-center justify-center">
-                        <svg x-show="open !== 4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
-                        <svg x-show="open === 4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2">
-                            <path d="M6 6l12 12M18 6l-12 12"/>
-                        </svg>
+                        <svg x-show="open !== 4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        <svg x-show="open === 4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="#1100FF" fill="none" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
                     </span>
-                </div>
-                <div x-show="open === 4" x-transition class="p-4 text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
-                    <p>Overvej at lave nye tiltag for at holde din digitale tilstedeværelse opdateret og organiseret, som f.eks. at oprette nye mapper til dokumenter eller bruge apps til at organisere opgaver.</p>
+                </button>
+                <div x-show="open === 4" x-transition class="p-4 text-[12px] text-black md:pl-[80px] md:text-[20px] md:pr-[80px]">
+                    <div class="flex justify-between items-center pb-4 mb-4">
+                        <p class="pl-[20px] max-w-[400px] md:pl-[30px] md:max-w-[1000px]">
+                            Overvej at lave nye tiltag for at holde din digitale tilstedeværelse opdateret og organiseret, som f.eks. at oprette nye mapper til dokumenter eller bruge apps til at organisere opgaver.                        </p>
+                    </div>
                 </div>
             </li>
+            
         </ul>
     </div>
 </section>
+
