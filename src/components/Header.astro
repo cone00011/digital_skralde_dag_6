@@ -1,7 +1,3 @@
----
-
----
-
 <div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-white">
   <header id="navbar" class="flex flex-row justify-between items-center">
     <div id="logo">
@@ -16,7 +12,7 @@
         <li><a href="/stepbystep" class="hover:text-[#1100FF] transition">HVORDAN DELTAGER DU?</a></li>
       </ul>
     </nav>
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu" aria-expanded="showmenu">
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu" aria-expanded="showmenu" aria-label="Åbn mobilmenu">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
       </svg>
@@ -29,5 +25,4 @@
       <li><a href="/stepbystep" class="hover:text-[#1100FF] transition border-b border-black pb-2 block">HVORDAN DELTAGER DU?</a></li>
     </ul>
   </nav>
-  
 </div>
